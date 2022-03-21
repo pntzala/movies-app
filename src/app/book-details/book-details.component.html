@@ -1,0 +1,41 @@
+<div class="container">
+  <!-- <div>
+    <mat-card>
+      <img mat-card-image src="./assets/img/no_pic.png"class="img-style"/>
+      <mat-card-content>
+        <span mat-card-avatar>
+          <mat-icon class="mat-icon-outlined">account_circle</mat-icon>
+        </span>
+        {{ book.author }}
+      </mat-card-content>
+    </mat-card>
+  </div> -->
+  <div>
+    <mat-card class="book-dtl">
+      <mat-card-title>{{ book.title }}</mat-card-title>
+      <mat-card-content>
+        <mat-card-subtitle>{{ book.subtitle }}</mat-card-subtitle>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="basic">Favourite</button>
+        <button mat-raised-button color="basic">Share</button>
+      </mat-card-actions>
+      <mat-card-content>
+        <p>Category: {{ book.category }}</p>
+        <p>Year: {{ book.published | customDate }}</p>
+        <p>Number of pages: {{ book.pages }}</p>
+      </mat-card-content>
+      <mat-card-content>
+        <p>Publisher: {{ book.publisher}}</p>
+      </mat-card-content>
+      <mat-card-content>
+        <p>ISBN-10: {{ book.isbn}}</p>
+        <p>ISBN-13: {{ book.isbn}}</p>
+      </mat-card-content>
+      <mat-card-footer>
+        <button mat-raised-button color="basic">BUY</button>
+      </mat-card-footer>
+    </mat-card>
+  </div>
+</div>
+

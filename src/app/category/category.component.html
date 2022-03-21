@@ -1,0 +1,12 @@
+
+<div class="category-wrapper">
+  <div class="book-info">
+    <app-book-item [author]="book.author" [large]="true"></app-book-item>
+    <app-book-details [book]="book"></app-book-details>
+  </div>
+  <div class="other-book">
+    <h2 class="mat-headline">Other books you may like</h2>
+    <app-book-list [max]="4"></app-book-list>
+  </div>
+</div>
+

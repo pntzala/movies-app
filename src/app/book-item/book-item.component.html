@@ -1,0 +1,19 @@
+<div>
+  <mat-card [ngClass]="{'pop': !large}">
+      <img mat-card-image src="./assets/img/no_pic.png" [ngClass]="{'img-style-large': large, 'img-style': !large}"/>
+    <mat-card-content>
+      <div *ngIf="!!author">
+        <span>
+          <mat-icon class="mat-icon-outlined">account_circle</mat-icon>
+        </span>
+        {{ author }}
+      </div>
+      <div *ngIf="!!title">
+        {{ title }}
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <div *ngIf="large" [ngClass]="{'rating': large}">
+    <ngx-star-rating></ngx-star-rating>
+  </div>
+</div>

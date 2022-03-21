@@ -1,0 +1,197 @@
+<div class="book-wrapper">
+  <h2 class="mat-headline page-title">Add new Book</h2>
+  <div>
+    <div class="new-book-wrapper">
+      <form class="form-wrapper" [formGroup]="bookFormGroup">
+          <div class="form-fields">
+            <div class="title-field">
+              <span>Title:</span>
+              <section class="fields-section">
+                <mat-form-field class="field-input" appearance="outline">
+                  <mat-label>max 120 characters</mat-label>
+                  <input matInput formControlName="title" required>
+                  <mat-error *ngIf="hasError('title', 'required') || hasError('title', 'pattern')">
+                    <span>Required, min 10/max 120 characters, @”#&*! allowed </span>
+                  </mat-error>
+                </mat-form-field>
+              </section>
+            </div>
+            <span class="fields-section">
+              <label>Import image:</label>
+              <app-image-upload></app-image-upload>
+            </span>
+          </div>
+          <div class="form-fields">
+            <div class="title-field">
+              <label>Description: </label>
+              <section class="fields-section">
+                <mat-form-field class="field-input" appearance="outline">
+                  <mat-label>max 512 characters</mat-label>
+                  <input matInput formControlName="description">
+                  <mat-error *ngIf="hasError('description', 'pattern')">
+                    <span>max 512 characters,the first letter uppercase</span>
+                  </mat-error>
+                </mat-form-field>
+              </section>
+            </div>
+            <span class="fields-section"></span>
+          </div>
+          <div class="form-fields">
+            <div>
+              <label for="category">Categories:</label>
+              <section class="fields-section">
+                <mat-form-field class="field-input" appearance="outline">
+                  <mat-label>Choose a category</mat-label>
+                  <mat-select [(value)]="category" formControlName="category">
+                    <mat-option value="1">One</mat-option>
+                    <mat-option value="2">Two</mat-option>
+                    <mat-option value="3">Three</mat-option>
+                    <mat-option value="4">Four</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </section>
+            </div>
+            <span class="fields-section">
+              <div class="title-field">
+                <span>Subtitle:</span>
+                <section class="fields-section">
+                  <mat-form-field class="field-input" appearance="outline">
+                    <mat-label>max 120 characters</mat-label>
+                    <input matInput formControlName="subtitle">
+                    <mat-error *ngIf="hasError('subtitle', 'pattern')">
+                      <span>Required, min 10/max 120 characters, @”#&*! allowed </span>
+                    </mat-error>
+                  </mat-form-field>
+                </section>
+              </div>
+            </span>
+          </div>
+          <div class="form-fields">
+            <div>
+              <label for="author">Authors Name:</label>
+              <section class="fields-section">
+                <mat-form-field class="field-input" appearance="outline">
+                  <mat-label>max 3 authors</mat-label>
+                  <input matInput formControlName="author">
+                  <mat-error *ngIf="hasError('author', 'pattern')">
+                    <span>min 5, max 60 characters</span>
+                  </mat-error>
+                </mat-form-field>
+              </section>
+            </div>
+            <span>
+              <div>
+                <label for="options">Options: </label>
+                <section class="fields-section">
+                  <mat-form-field class="field-input" appearance="outline">
+                    <mat-label>make an option</mat-label>
+                    <input matInput formControlName="options">
+                  </mat-form-field>
+                </section>
+              </div>
+            </span>
+          </div>
+          <div class="form-fields">
+            <div>
+              <label for="publisher">Publisher: </label>
+              <section class="fields-section">
+                <mat-form-field class="field-input" appearance="outline">
+                  <mat-label>max 60 characters</mat-label>
+                  <input matInput formControlName="publisher">
+                  <mat-error *ngIf="hasError('publisher', 'pattern')">
+                    <span>min 5, max 60 characters</span>
+                  </mat-error>
+                </mat-form-field>
+              </section>
+            </div>
+            <span>
+              <div>
+               <label for="rating">Rating: </label>
+               <section class="fields-section">
+                 <mat-form-field class="field-input" appearance="outline">
+                   <mat-label>1 digit</mat-label>
+                   <input matInput formControlName="rating">
+                   <mat-error *ngIf="hasError('rating', 'pattern')">
+                     <span>1 digit,1 to 5</span>
+                   </mat-error>
+                  </mat-form-field>
+                </section>
+              </div>
+            </span>
+          </div>
+          <div class="form-fields">
+            <div>
+              <label for="published">Year: </label>
+              <section class="fields-section">
+                <mat-form-field class="field-input" appearance="outline">
+                  <mat-label>enter year</mat-label>
+                  <input matInput formControlName="published">
+                  <mat-error *ngIf="hasError('published', 'pattern')">
+                    <span>4 digits</span>
+                  </mat-error>
+                </mat-form-field>
+              </section>
+            </div>
+            <span>
+              <div>
+                <label for="isbn10">ISBN-10: </label>
+                <section class="fields-section">
+                  <mat-form-field class="field-input" appearance="outline">
+                    <mat-label>10 digits</mat-label>
+                    <input matInput formControlName="isbn10">
+                    <mat-error *ngIf="hasError('isbn10', 'pattern')">
+                      <span>Required, strictly 10 digits</span>
+                    </mat-error>
+                  </mat-form-field>
+               </section>
+              </div>
+            </span>
+          </div>
+          <div class="form-fields">
+            <div>
+             <label for="pages">Page Numbers: </label>
+             <section class="fields-section">
+               <mat-form-field class="field-input" appearance="outline">
+                 <mat-label>max 9999 pages</mat-label>
+                 <input matInput formControlName="pages">
+                 <mat-error *ngIf="hasError('pages', 'pattern')">
+                   <span>9999 max pages number</span>
+                 </mat-error>
+                </mat-form-field>
+             </section>
+            </div>
+            <span>
+              <div>
+                <section class="fields-section">
+                  <label for="isbn">ISBN-13: </label>
+                  <mat-form-field class="field-input" appearance="outline">
+                    <mat-label>13 digits</mat-label>
+                    <input matInput formControlName="isbn" required>
+                    <mat-error *ngIf="hasError('isbn', 'required') || hasError('isbn', 'pattern')">
+                      <span>Required, strictly 13 digits</span>
+                    </mat-error>
+                  </mat-form-field>
+                </section>
+              </div>
+            </span>
+          </div>
+      </form>
+      <ng-template>
+        <mat-icon class="material-icons-outlined">edit</mat-icon>
+      </ng-template>
+      <ng-template>
+        <mat-icon class="material-icons-outlined">key</mat-icon>
+      </ng-template>
+    </div>
+  </div>
+  <div class="add-button">
+    <button mat-fab color="basic" (click)="addAnotherBook()">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+  <div class="save-button">
+    <button mat-raised-button color="basic" (click)="onFormSubmit()">
+      <span>SAVE</span>
+    </button>
+  </div>
+</div>

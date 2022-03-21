@@ -1,0 +1,6 @@
+<mat-toolbar color="basic">
+<!-- Fetch selected filed on change -->
+  <input type="file" #fileInput id="uploadFile" (change)="uploadFileEvt($event)" name="uploadFile" multiple="multiple"
+     accept="image/*" />
+</mat-toolbar>
+

@@ -1,0 +1,16 @@
+.category-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.book-info {
+  display: flex;
+  padding-bottom: 3rem;
+  padding-top: 5rem;
+}
+
+.other-book {
+  display: flex;
+  flex-direction: column;
+}

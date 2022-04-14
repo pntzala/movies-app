@@ -1,0 +1,17 @@
+<nav mat-tab-nav-bar>
+  <a mat-tab-link class="brand" [routerLink]="['/']">Movies</a>
+  <mat-tab-group>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <a mat-tab-link [routerLink]="['/']" routerLinkActive="router-link-active">Search</a>
+      </ng-template>
+     </mat-tab>
+     <mat-tab>
+      <ng-template mat-tab-label>
+        <a mat-tab-link [routerLink]="['/categories']" routerLinkActive="router-link-active">Categories</a>
+     </ng-template>
+    </mat-tab>
+  </mat-tab-group>
+</nav>
+
+

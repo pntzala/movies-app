@@ -1,0 +1,21 @@
+<div>
+  <mat-card [ngClass]="{'pop': !large}">
+    <mat-card-subtitle>
+      <span class="material-icons">star</span>
+      {{movie?.vote_average}} /10
+    </mat-card-subtitle>
+    <img (click)="openDialogMovie(movie.id)"
+      mat-card-image
+      src="https://image.tmdb.org/t/p/w370_and_h556_bestv2/{{movie?.poster_path}}"  [ngClass]="{'img-style-large': large , 'img-style': !large}"
+      alt="movie.title ? movie.title"
+    />
+    <img  *ngIf="!movie?.poster_path" (click)="openDialogMovie(movie.id)"
+      mat-card-image
+      src="https://image.tmdb.org/t/p/w370_and_h556_bestv2/{{movie?.poster_path}}"  [ngClass]="{'img-style-large': large , 'img-style': !large}"
+      alt="movie.title ? movie.title"
+    />
+    <mat-card-content *ngIf="!large">
+      <p>{{ movie.title | uppercase | elipsis: 11}}</p>
+    </mat-card-content>
+  </mat-card>
+</div>

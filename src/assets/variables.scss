@@ -1,0 +1,161 @@
+@use '@angular/material' as mat;
+
+$font-family--sans-serif:  Nunito, sans-serif;
+$font-family-serif-dosis: Dosis, sans-serif;
+
+
+$base-font-size: 62.5%;
+$base-line-height: 1.6;
+$base-bg: #141414;
+$base-bg1:#212121;
+$base-font-color: #fff;
+$anchor-font-color: #dc4666;
+$base-font-family: $font-family--sans-serif;
+$base-font-weight: 400;
+
+$letter-spacing: 0.4px;
+$text-color-grey: #abb7c4;
+
+$primary-color: #2196f3;
+$secondary-color: #202124;
+$secondary-color: #dc4666;
+$text-color: #fafafa;
+
+$breakpoint-xsmall: 640px;
+$breakpoint-small: 768px;
+$breakpoint-medium: 1024px;
+$breakpoint-large: 1200px;
+$breakpoint-xlarge: 1400px;
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  font-weight: $base-font-weight;
+  color: $base-font-color;
+  background: $base-bg;
+}
+
+//popi:vazei sta links xrwma to exw valei sto scss
+// a {
+//   color: $base-font-color;
+// }
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   font-family: $base-font-family;
+//   margin: 0;
+//   font-weight: 500;
+//   color: $base-font-color;
+// }
+
+// tha ta kanei mikra!!!
+// p {
+//   font-family: $base-font-family;
+//   font-size: $base-font-size;
+//   color: $text-color-grey;
+//   font-weight: 300;
+//   text-transform: none;
+// }
+
+
+/**
+* Remove text-shadow in selection highlight:
+* https://twitter.com/miketaylr/status/12228805301
+*
+* These selection rule sets have to be separate.
+* Customize the background color to match your design.
+*/
+
+::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+::selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+/**
+* A better looking default horizontal rule
+*/
+
+hr {
+  display: block;
+  height: 1px;
+  padding: 0;
+  margin: 1em 0;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+
+/**
+* Remove the gap between audio, canvas, iframes,
+* images, videos and the bottom of their containers:
+* https://github.com/h5bp/base5-boilerplate/issues/440
+*/
+
+// audio,
+// canvas,
+// iframe,
+// img,
+// svg,
+// video {
+//   vertical-align: middle;
+// }
+
+/**
+* Remove default fieldset styles.
+*/
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+/**
+* Allow only vertical resizing of textareas.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/**
+* Responsive images
+*/
+
+//na to dw gia ta images!!!
+// img {
+//   display: inline-block;
+//   max-width: 100%;
+//   height: auto;
+//   vertical-align: middle;
+//   -ms-interpolation-mode: bicubic;
+// }
+
+// table {
+//   width: 100%;
+//   border-collapse: collapse;
+
+//   th,
+//   td {
+//     padding: 0.5rem 0;
+//     text-align: left;
+//   }
+// }
+
+

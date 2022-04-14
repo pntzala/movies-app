@@ -8,49 +8,43 @@ import { AngularMaterialModule } from './material.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { CategoryComponent } from './category/category.component';
-import { BookItemComponent } from './book-item/book-item.component';
-import { BookDetailsComponent } from './book-details/book-details.component';
-import { BookAddComponent } from './book-add/book-add.component';
-import { ImageUploadComponent } from './image-upload/image-upload.component';
-import { SearchComponent } from './search/search.component';
-import { SearchBarComponent } from './search-bar/search-bar.component';
-import { BookListComponent } from './book-list/book-list.component';
-import { NgxStarRatingModule } from 'ngx-star-rating';
-import {CustomDatePipe} from './custom.datepipe';
-
-
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { MovieInfoDialogComponent } from './components/movie-info-dialog/movie-info-dialog.component';
+import { MovieItemComponent } from './components/movie-item/movie-item.component';
+import { MovieItemDetailsComponent } from './components/movie-item-details/movie-item-details.component';
+import { SearchComponent } from './components/search-movies/search-movies.component';
+import { MovieListComponent } from './components/movie-list/movie-list.component';
+import { PipeModule } from './pipe/pipe.module';
+import { HttpClientModule } from '@angular/common/http';
+import { SkeletonModule } from './shared/skeleton/skeleton.module';
+import { CategoriesComponent } from './components/categories/categories.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    CategoryComponent,
-    BookItemComponent,
-    BookDetailsComponent,
-    BookAddComponent,
-    ImageUploadComponent,
+    MovieInfoDialogComponent,
+    MovieItemComponent,
+    MovieItemDetailsComponent,
     SearchComponent,
-    SearchBarComponent,
-    BookListComponent,
-    CustomDatePipe
+    CategoriesComponent,
+    MovieListComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     FormsModule,
     AppRoutingModule,
     AngularMaterialModule,
     ReactiveFormsModule,
-    NgxStarRatingModule
+    PipeModule,
+    SkeletonModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers:  [
-    { provide: APP_BASE_HREF, useValue: '/' }
-  ],
+  providers:  [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

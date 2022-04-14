@@ -1,0 +1,26 @@
+
+<mat-dialog-content class="info-wrapper">
+  <div class="info">
+    <div class="movie-info">
+      <app-movie-item [movie]="data.movie" [large]="true"></app-movie-item>
+      <app-movie-item-details [movie]="data.movie"></app-movie-item-details>
+    </div>
+    <!-- form used mostly as an example of forms -->
+    <form class="form-wrapper" [formGroup]="movieFormGroup">
+      <div class="form-fields">
+        <section *ngIf="!!data.userIsAuthenticated">
+          <mat-form-field appearance="outline">
+            <mat-label>0-9</mat-label>
+            <input matInput formControlName="rating" required>
+            <mat-error *ngIf="hasError('rating', 'required') || hasError('rating', 'pattern')">
+              <span>error</span>
+            </mat-error>
+            </mat-form-field>
+        </section>
+        <button mat-button *ngIf="!!data.userIsAuthenticated" (click)="onPostRateSubmit(data.movie.id)" class="rate">Post Rate</button>
+      </div>
+    </form>
+  </div>
+</mat-dialog-content>
+
+

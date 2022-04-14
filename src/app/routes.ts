@@ -1,12 +1,12 @@
 import { Routes } from '@angular/router';
+import { CategoriesComponent } from './components/categories/categories.component';
 
-import { CategoryComponent } from './category/category.component';
-import { SearchComponent } from './search/search.component';
-import { BookAddComponent } from './book-add/book-add.component';
+import { MovieInfoDialogComponent } from './components/movie-info-dialog/movie-info-dialog.component';
+import { SearchComponent } from './components/search-movies/search-movies.component';
 
 export const routes: Routes = [
-    { path:'', redirectTo: '/category', pathMatch: 'full' },
-    { path: 'category', component: CategoryComponent },
-    { path: 'book/add', component: BookAddComponent },
-    { path: 'search', component: SearchComponent }
+    { path:'', redirectTo: '/home', pathMatch: 'full' },
+    { path: 'home', component: SearchComponent },
+    { path: 'categories', component: CategoriesComponent },
+    { path: '**', redirectTo: 'home'}
 ];

@@ -1,0 +1,7 @@
+<mat-list class="content">
+  <mat-list-item class="horizontal-mat-list-item" *ngFor="let movie of movies | slice: 0: pageSize">
+    <div>
+      <app-movie-item [movie]="movie" [userIsAuthenticated]="userIsAuthenticated"></app-movie-item>
+    </div>
+  </mat-list-item>
+</mat-list>

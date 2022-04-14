@@ -1,7 +1,0 @@
-<mat-list class="content">
-  <mat-list-item class="horizontal-mat-list-item" *ngFor="let book of books, let i = index">
-    <div *ngIf="i < max">
-      <app-book-item [title]="book.title"></app-book-item>
-    </div>
-  </mat-list-item>
-</mat-list>

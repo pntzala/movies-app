@@ -1,0 +1,12 @@
+@import 'src/assets/variables';
+
+.movie-dtl{
+  margin-left: 8rem;
+  color: $text-color;
+  background-color:$base-bg;
+  max-width: 50%;
+}
+
+.mat-card-subtitle {
+  color: $text-color-grey;
+}

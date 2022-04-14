@@ -1,0 +1,29 @@
+@import 'src/assets/variables';
+
+.img-style-large {
+  width: auto;
+  pointer-events:none;
+}
+
+.img-style {
+  cursor: pointer;
+}
+
+.mat-card.pop {
+  width: 15rem;
+  background-color: $base-bg1;
+  border: 1px solid #ffffff1a;
+
+}
+
+.material-icons {
+  font-size: 16px;
+}
+
+.backdropBackground {
+  background-color: $base-bg1;
+}
+
+// .ads button{
+//   pointer-events:none;
+// }

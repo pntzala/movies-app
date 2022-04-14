@@ -1,0 +1,30 @@
+@import 'src/assets/variables';
+
+.mat-tab-header {
+  height: 65px;
+  background-color:$base-bg1;
+  border-bottom: 1px solid #ffffff1a;
+}
+
+.mat-tab-link {
+  color: $base-font-color;
+  font-size: 15px;
+  margin-top: 12px;
+}
+
+.mat-tab-group {
+  justify-content: flex-end;
+}
+
+.brand {
+  color: $base-font-color;
+  font-size: 24px;
+  margin-right: auto;
+}
+
+.auth {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5px;
+}
+

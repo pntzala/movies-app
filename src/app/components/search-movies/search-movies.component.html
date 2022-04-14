@@ -1,0 +1,26 @@
+<div class="search-wrapper">
+  <div *ngIf="loader">
+    <app-skeleton *ngIf="loader"></app-skeleton>
+  </div>
+  <div *ngIf="!loader">
+    <div class="auth">
+      <button mat-button (click)="onGetGuestAuth()" *ngIf="!userIsAuthenticated">Get Guest Access</button>
+      <button mat-button  [disabled]="userIsAuthenticated" *ngIf="userIsAuthenticated" class="gauth">You have ACCESS to rate a movie</button>
+    </div>
+    <div>
+      <h2 class="mat-headline">Search Movies
+        <div class="input-group">
+          <input matInput type="text" class="searchdesign" placeholder="Search for movies..." [(ngModel)]="searchStr"
+            name="searchStr" (keyup.enter)="searchMovies(searchPage)">
+          <span class="input-group-btn">
+            <button matSuffix mat-button class="btnDesign" (click)="searchMovies(searchPage)"><mat-icon>search</mat-icon></button>
+          </span>
+        </div>
+      </h2>
+    </div>
+    <div *ngIf="movies">
+        <app-movie-list [movies]="movies" [pageSize]="pageSize" [userIsAuthenticated]="userIsAuthenticated"></app-movie-list>
+    </div>
+  </div>
+  <mat-paginator [length]="totalResults" [pageSize]="pageSize" [pageIndex]="pageIndex" (page)="changePage($event)" *ngIf="!loader"></mat-paginator>
+</div>

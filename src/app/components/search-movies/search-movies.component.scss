@@ -1,0 +1,52 @@
+@import 'src/assets/variables';
+
+.search-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.auth {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5px;
+}
+
+.input-group {
+  display: flex;
+  margin-left: 2px;
+}
+
+.searchdesign{
+  width: 50%;
+  background: $base-bg1;
+  border: 1px solid #716e6e;
+  color: #fff;
+}
+
+.btnDesign{
+  height: 44px;
+  border-radius: 0;
+  background: #888495;
+  border: #888495;
+}
+
+.mat-input-element::placeholder{
+  color: #fff;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.mat-button.mat-button-disabled{
+  background-color: $base-bg1;
+  color: #fff;
+  cursor: no-drop;
+}

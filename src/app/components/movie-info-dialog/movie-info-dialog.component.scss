@@ -1,0 +1,31 @@
+@import 'src/assets/variables';
+
+.info-wrapper {
+  background-color: $base-bg;
+}
+
+.movie-info {
+  display: flex;
+  align-items:center;
+  padding-bottom: 2px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-wrapper {
+  width: 32%;
+  overflow-y: auto;
+}
+
+.form-fields {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mat-button{
+  height: 50px;
+  margin-top: 5px;
+}

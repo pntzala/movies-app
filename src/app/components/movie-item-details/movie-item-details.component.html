@@ -1,0 +1,18 @@
+<div class="container">
+  <div>
+    <mat-card class="movie-dtl">
+      <mat-card-title>{{ movie.title }}</mat-card-title>
+      <mat-card-content>
+        <p>{{movie?.vote_count | number  }} Reviews</p>
+        <p>Released: {{movie?.release_date | date:'mediumDate' }}</p>
+      <mat-card-subtitle>{{ movie.overview }}</mat-card-subtitle>
+      </mat-card-content>
+      <mat-card-content>
+        <p *ngIf="movie?.budget">Budget: ${{ movie?.budget | number }}</p>
+        <p *ngIf="movie?.revenue">Revenue: ${{ movie?.revenue | number  }}</p>
+        <p>Language: {{ movie.original_language | fullLanguage }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
